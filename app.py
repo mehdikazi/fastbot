@@ -167,6 +167,8 @@ def parse_user_message(user_text, user_id):
                         except:
                             print('l')
                     options = options or []
+                    if action == "onboarding_height":
+                        text = text + " Your TDEE is: " + str(calculate_tdee(current_user[0].age, current_user[0].height))
                 except:
                     options = []
                 for option in options:
